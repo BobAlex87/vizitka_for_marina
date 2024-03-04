@@ -20,7 +20,7 @@ second_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     )],
     [InlineKeyboardButton(
         text="Просмотреть информацию",
-        callback_data="pdf"
+        callback_data="video"
     )],
     [InlineKeyboardButton(
         text="Видео-презентация",
