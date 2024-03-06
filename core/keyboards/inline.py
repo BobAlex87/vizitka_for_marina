@@ -15,19 +15,15 @@ first_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 #инлайн-клавиатура которая появляеться после нажатия кнопки "больше информации"
 second_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(
-        text="Прочесть информацию",
+        text="📚Прочесть информацию",
         callback_data="doc"
     )],
     [InlineKeyboardButton(
-        text="Просмотреть информацию",
-        callback_data="video"
-    )],
-    [InlineKeyboardButton(
-        text="Видео-презентация",
+        text="📺Видео-презентация",
         url="https://youtu.be/ur1t6mC7iG8?si=cDNHVw4inGggusFN"
     )],
     [InlineKeyboardButton(
-        text="Частые вопросы",
+        text="⁉️Частые вопросы",
         callback_data="questions"
     )],
     [InlineKeyboardButton(
@@ -42,15 +38,15 @@ second_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 #инлайн-клавиатура которая появляеться после нажатия кнопки "частые вопросы"
 questions_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(
-        text="Какие условия входа в команду?",
+        text="🤝Какие условия входа в команду?",
         callback_data="text_1"
     )],
     [InlineKeyboardButton(
-        text="Подробно про 6 видов дохода",
+        text="💎Что я получу от участия в клубе?",
         callback_data="text_2"
     )],
     [InlineKeyboardButton(
-        text="Как выводятся средства?",
+        text="💵Как выводятся средства?",
         callback_data="text_3"
     )],
     [InlineKeyboardButton(
