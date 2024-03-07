@@ -49,7 +49,8 @@ async def get_button_call_manager(call: CallbackQuery, bot: Bot):
     :param bot:
     :return: first_name="Марина", phone_number="+380955498778"
     """
-    await call.message.answer_contact(first_name="Марина", phone_number="+380955498778")
+    await call.message.answer('t.me/marynaantipova')
+    #await call.message.answer_contact(first_name="Марина", phone_number="+380955498778")
     await call.answer()
 
 
