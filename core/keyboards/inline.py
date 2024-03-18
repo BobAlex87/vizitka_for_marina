@@ -16,11 +16,11 @@ first_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
 second_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(
         text="📚Прочесть информацию",
-        callback_data="doc"
+        url="https://drive.google.com/file/d/1HYhmVN8Ph3jQ5tIegCsrbFidpo8e0UPl/view?usp=sharing"
     )],
     [InlineKeyboardButton(
         text="📺Видео-презентация",
-        url="https://youtu.be/ur1t6mC7iG8?si=cDNHVw4inGggusFN"
+        url="https://www.youtube.com/watch?v=Wd_75X6BcQc"
     )],
     [InlineKeyboardButton(
         text="⁉️Частые вопросы",
@@ -50,7 +50,7 @@ questions_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
         callback_data="text_3"
     )],
     [InlineKeyboardButton(
-        text="Как работает пассивный доход?",
+        text="👛6 видов дохода",
         callback_data="text_4"
     )],
     [InlineKeyboardButton(
