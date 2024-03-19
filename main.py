@@ -7,9 +7,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from config_reader import config
 from core.database.database import db_start, send_data
 from core.handlers.basic import get_start, get_help, get_answer, get_link, get_exit
-from core.handlers.callback import get_button_more_info, get_button_link, \
-    get_button_call_manager, get_button_questions, get_questions_1, get_questions_2, get_questions_3, get_questions_4, \
-    get_exit_inline, get_next_question
+from core.handlers.callback import get_button_more_info, get_button_link, get_button_call_manager, get_button_questions,\
+     get_questions_1, get_questions_2, get_questions_3, get_questions_4, get_exit_inline, get_next_question
 from core.commands.commands_menu import set_commands
 
 from aiogram.client.session.aiohttp import AiohttpSession
@@ -17,11 +16,11 @@ from aiogram.client.session.aiohttp import AiohttpSession
 
 async def start_bot(bot: Bot):
     await set_commands(bot)#Активируем кнопку Menu
-    #await bot.send_message(config.admin_id.get_secret_value(), text='Бот запущен!')
+    await bot.send_message(config.admin_id.get_secret_value(), text='Бот запущен!')
 
 
-#async def stop_bot(bot: Bot):
-    #await bot.send_message(config.admin_id.get_secret_value(), text='Бот остановлен!')
+async def stop_bot(bot: Bot):
+    await bot.send_message(config.admin_id.get_secret_value(), text='Бот остановлен!')
 
 
 async def main():
@@ -40,8 +39,7 @@ async def main():
 
 #регистрируем хендлеры в диспетчере:
     dp.startup.register(start_bot)
-    #dp.shutdown.register(stop_bot)
-
+    dp.shutdown.register(stop_bot)
     dp.message.register(get_start, Command(commands=['start']))
     dp.message.register(get_help, Command(commands=['help']))
     dp.message.register(get_exit, Command(commands=['exit']))
@@ -49,7 +47,6 @@ async def main():
     dp.message.register(send_data, Command(commands=['data']))#у бота нет кнопки для этой команды!!!
     dp.callback_query.register(get_button_more_info, F.data == "more_info")
     dp.callback_query.register(get_button_link, F.data == "link")
-    #dp.callback_query.register(get_button_google_doc, F.data == "doc")
     dp.callback_query.register(get_button_call_manager, F.data == "call_manager")
     dp.callback_query.register(get_button_questions, F.data == "questions")
     dp.callback_query.register(get_questions_1, F.data == "text_1")

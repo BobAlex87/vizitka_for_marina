@@ -42,6 +42,7 @@ def get_data_from_database():
     #conn.close()
     return data
 
+
 async def send_data(message: types.Message):
     if message.from_user.id == 469308650 or 574923539:
         # Получаем данные из базы данных

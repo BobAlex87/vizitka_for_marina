@@ -31,17 +31,6 @@ async def get_button_link(call: CallbackQuery, bot: Bot):
     await call.answer()
 
 
-# async def get_button_google_doc(call: CallbackQuery, bot: Bot):
-#     await call.message.answer("https://drive.google.com/file/d/1HYhmVN8Ph3jQ5tIegCsrbFidpo8e0UPl/view?usp=sharing")
-#     await call.answer() #для того чтобы кнопка не мигала
-
-
-# async def get_button_video(call: CallbackQuery, bot: Bot):
-#     video = FSInputFile("core/images/video_inf.mpeg")
-#     await call.message.answer_video(video)
-#     await call.answer()
-
-
 async def get_button_call_manager(call: CallbackQuery, bot: Bot):
     """
     ответ на нажатие инлайн-кнопки 'связь с менеджером'
@@ -50,7 +39,6 @@ async def get_button_call_manager(call: CallbackQuery, bot: Bot):
     :return: first_name="Марина", phone_number="+380955498778"
     """
     await call.message.answer('t.me/marynaantipova')
-    #await call.message.answer_contact(first_name="Марина", phone_number="+380955498778")
     await call.answer()
 
 
@@ -86,6 +74,7 @@ async def get_questions_1(call: CallbackQuery, bot: Bot):
     )
     await call.answer()
 
+
 async def get_questions_2(call: CallbackQuery, bot: Bot):
     """
     Ответ на нажатие инлайн-кнопки клавиатуры questions_inline_keyboard 'Что я получу от участия в клубе?'
@@ -105,6 +94,7 @@ async def get_questions_2(call: CallbackQuery, bot: Bot):
     )
     await call.answer()
 
+
 async def get_questions_3(call: CallbackQuery, bot: Bot):
     """
     Ответ на нажатие инлайн-кнопки клавиатуры questions_inline_keyboard 'Как выводятся средства?'
@@ -121,6 +111,7 @@ async def get_questions_3(call: CallbackQuery, bot: Bot):
         reply_markup=questions_inline_keyboard_repiet,
     )
     await call.answer()
+
 
 async def get_questions_4(call: CallbackQuery, bot: Bot):
     """
